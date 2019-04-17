@@ -1,9 +1,9 @@
 let decimalToBinary = function(num) {
+  if (isNaN(num)) return 'Not a number';
+  
   let i = 0;
   let binary = '';
 
-  if (isNaN(num)) return 'Not a number';
-  
   while (Math.pow(2,i) <= num) {
     ++i;
   }
@@ -19,5 +19,7 @@ let decimalToBinary = function(num) {
   
   return binary;
 };
-// decimalToBinary(10000434451323143) returns the same result as
+
+// decimalToBinary(10000434451323143) 
+// returns the same result as
 // decimalToBinary(10000434451323144) ???
