@@ -1,12 +1,16 @@
-const swap = require('./swap');
-
 function insertionSort(data) {
-  for (let i = 1, len = data.length; i < len; i++) {
-    for (let j = i; j >= 0; j--) {
-      if (data[j - 1] > data[j]) {
-        swap.swap(data, j - 1, j);
-      }
+  let key, i;
+
+  for (let j = 1; j < data.length; j++) {
+    key = data[j];
+    i = j - 1;
+
+    while(i >= 0 && data[i] > key) {
+      data[i + 1] = data[i];
+      i -= 1;
     }
+    
+    data[i + 1] = key;
   }
 
   return data;
