@@ -1,3 +1,4 @@
+// Worse-case: O(n^2)
 function insertionSort(arr) {
   let key, i;
 
@@ -15,7 +16,7 @@ function insertionSort(arr) {
 
   return arr;
 }
-
+// Worse-Case: O(nlogn)
 function binarySearch(arr, item, low, high) {
   if (high <= low) {
     return item > arr[low] ? low + 1 : low;
